@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 const App: React.FC = () => {
   const message = "Hello, world!";

@@ -1,9 +1,12 @@
 {
-  "setupFiles": ["<rootDir>/setupTests.js"],
+  "setupFiles": ["<rootDir>/tests/setup.js"],
   "moduleFileExtensions": ["ts", "tsx", "js"],
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"
   },
-  "testMatch": ["**/__tests__/*.(ts|tsx)"],
-  "snapshotSerializers": ["enzyme-to-json/serializer"]
+  "testMatch": ["<rootDir>/tests/unit/**/*.(ts|tsx)"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "moduleNameMapper": {
+    "^.+\\.(css|less)$": "<rootDir>/tests/stubs/CSSStub.js"
+  }
 }
